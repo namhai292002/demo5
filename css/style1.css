@@ -1,0 +1,114 @@
+
+/* ============================== content =================================== */
+.watchMona {
+    width: 100%;
+    height: auto;
+    margin: 60px 0;
+}
+.watchMona .img-watchMona img {
+    width: 100%;
+}
+.watchMona .info-watchMona {
+    transform: translateY(40%);
+}
+.watchMona .info-watchMona h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.watchMona .info-watchMona p {
+    font-size: 17px;
+    line-height: 25px;
+    color: #696969;
+    font-weight: 600;
+    
+}
+.section_service i {
+color:#353535;
+font-size: 50px;
+margin-right: 20px;
+}
+.section_service .row >div {
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: space-between;
+}
+.section_service .row > div div h2 {
+    margin-bottom: 20px;
+    font-weight: 900;
+    font-size: 20px;
+} 
+.section_service .row > div div p {
+    color: #898989;
+    font-weight: 500;
+    line-height: 25px;
+}
+.banner {
+    position: relative;
+
+}
+.banner img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    opacity: 5;
+}
+.banner .overlay {
+    background:rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    opacity: 100;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      
+}
+.banner .overlay .row  {
+    opacity: 200;
+    width: 100%;
+}
+.banner .overlay .row  > div {
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+}
+.banner .overlay .row > div  {
+    color: white;
+    font-size: 17px; 
+}
+.banner .overlay .row > div span {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.feedback {
+    border-bottom: 1px solid black;
+    padding: 0px 0;
+}
+.feedback .row {
+    display: flex;
+    justify-content: space-between;
+}
+.feedback  img  {
+    width: 35%;
+}
+.feedback .row > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.feedback i {
+    text-align: center;
+    font-size: 17px;
+    color: black;
+    margin: 30px 0;
+}
+.feedback p {
+    font-size: 17px;
+    font-weight: bold;
+}
+

@@ -1,0 +1,184 @@
+.page-title {
+display: flex;
+justify-content: space-between;
+margin: 30px 0;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.page-title .page-local,
+.page-title .filter-products {
+    display: flex;
+}
+.page-title .page-local span{
+    margin: 0 10px;
+    font-size: 25px;
+    color: #bababa;
+}
+.page-title .page-local a {
+    color: #bababa;
+    transition: 0.3s;
+}
+.page-title .page-local a:hover {
+    color:black
+}
+.page-title .filter-products h3 {
+    margin-right: 20px;
+}
+.page-title .filter-products .filter .display-filter {
+    padding: 7px 30px 7px 7px;
+    border: 1px solid #b7b7b7;
+    position: relative;
+    box-shadow: 0 0 5px rgb(0 0 0 / 60%);
+    width: 300px;
+}
+.page-title .filter-products .filter .display-filter span i {
+    color:black;
+    position: absolute;
+    right: 5px; 
+}
+.page-title .filter-products .filter .list_prd {
+    line-height: 35px;
+    box-shadow: 0 0 2px rgb(0 0 0 / 60%);
+    display: none;
+
+}
+.page-title .filter-products .filter .list_prd.display {
+    display: block;
+}
+.page-title .filter-products .filter .list_prd p:hover {
+    background-color: #5273ea;
+    width: 300px;
+    color: white;
+    box-shadow: 0 0 5px rgb(0 0 0 / 60%)
+}
+.main  h3 {
+    margin: 20px 0;
+}
+.main .category-page-row .category-prd .select {
+    border: 1px solid #b7b7b7;
+    box-shadow: 0 0 5px rgb(0 0 0 / 60%);
+    line-height: 35px;
+    padding: 10px;
+    background-color: #FCFCFC; 
+}
+.main .category-page-row .category-prd .select p {
+    border-bottom: 1px solid black; 
+}
+.main .category-page-row .category-prd .select :nth-child(3){
+    border-bottom: none;
+    position: relative;
+}
+.main .category-page-row .category-prd .select :nth-child(3) span i {
+    position: absolute;
+    color:black;
+    right: 5px;
+    transform: translateY(50%);
+}
+.main .category-page-row .category-prd .select .select-page ul li {
+    color: black;
+    padding:0 10px;
+}
+.main .category-page-row .category-prd .select .select-page {
+    border: 1px solid black;
+    width: 100%;
+    background-color: #e5e3e3;
+    display: none;
+}
+.main .category-page-row .category-prd .select .select-page.x {
+    display: block;
+}
+/* .title-prd.y{
+    transform: rotate(180deg);
+    background-color: red;
+} */
+.category-page-row {
+    margin-bottom: 80px;
+}
+.title-Prd .box-prd li img {
+    width: 25%;
+}
+.title-Prd .box-prd {
+    border: 1px solid #b7b7b7;
+    box-shadow: 0 0 5px rgb(0 0 0 / 60%);
+}
+.title-Prd {
+    margin-top: 30px;
+}
+.title-Prd .box-prd li {
+    display: flex;
+    align-items: center;
+    margin: 12px 10px;
+    border-bottom: 1px solid black;
+}
+.title-Prd .box-prd :last-child {
+    border-bottom: none;
+}
+.title-Prd .box-prd li .info-box {
+    color: black;
+    padding: 5px 0 5px 10px;
+    font-size: 15px;
+    line-height: 30px;
+}
+.title-Prd .box-prd li .info-box :nth-child(2){
+    font-weight: bold;
+}
+.title-Prd .box-prd .info-blogs {
+    color: black;
+    font-size: 15px;
+}
+
+
+.box-Prd {
+    border: 1px solid #ececec;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 2px rgb(0 0 0 / 30%);
+}
+.box-Prd .img-prd {
+    height: 230px;
+    border-bottom: 1px solid #ececec;
+}
+.box-Prd img {
+    width: 100%;
+    height: auto;
+}
+.box-Prd .info_prd {
+    margin: 15px auto;
+    line-height: 30px;
+    text-align: center;
+}
+.box-Prd .info_prd h2 {
+    font-size: 17px;
+}
+.box-Prd .info_prd h3 {
+    font-size: 15px;
+    font-weight: bold;
+    color: #c89979;
+}
+.box-Prd .info_prd h3 span {
+    text-decoration: underline #c89979;
+}
+/* =============== chung cho các button ========== */
+.btn {
+    background-color: #c89979;
+    outline: none;
+    border: none;
+    transition: all 0.7s ease;
+    padding: 10px 15px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+.btn:hover{
+    background-color: #a07a61;
+    cursor: pointer;  
+}
+.list_prd {
+    display: grid;
+    grid-template-columns: auto auto auto auto ;
+    row-gap: 15px;
+    column-gap: 15px;
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/_grid.css"> 
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>ADD PRD</title>
+</head>
+<body>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0bebc;
+}
+.container .login-form {
+    width: 50%;
+    height: 600px;
+    border: 2px solid #a07a61;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 5px rgb(0 0 0 / 30%);
+}
+.container .login-form > div,
+.container .login-form button  {
+    width: 80%;
+    height: 40px;
+    margin: 20px auto;
+}
+.container .login-form button {
+    background-color: #a07a61;
+    outline: none;
+    border: none;
+    color:white;
+    border-radius: 5px;
+    transition: 0.7s;
+}
+.container .login-form button:hover {
+    background-color: #543b2b;
+    cursor: pointer;
+}
+.container .login-form > div input:hover {
+    cursor: pointer;
+}
+.container .login-form > div input {
+    width: 100%;
+    height: 30px;
+}
+img {
+    width: 80%;
+    object-fit: cover;
+    
+}
+.cartItem {
+    position: relative;
+}
+.cartItem .number_item {
+    position: absolute;
+    width:20px;
+    height: 20px;
+    top:-15px;
+    left: 10px;
+    border-radius: 50%;
+    background-color: white;
+    line-height: 20px;
+    text-align: center;
+    font-size: 15px;
+}
+    </style>
+
+    <div class="container">
+        <div class="login-form">
+            <img src="./images/logo/logo-mona-2.png" alt="">
+            <div >
+                <p>Image product</p>
+                <input type="text"  id="image">
+            </div>
+            <div >
+                <p>Name product</p>
+                <input type="text"  id="name">
+            </div>
+            <div >
+                <p>Cost</p>
+                <input type="number"  id="price">
+            </div>
+            <button onclick="MakeProduct()" >Tạo sản phẩm </button>
+        </div>
+        <a href="./index.html" target="_blank">
+            <div class="cartItem">
+                <i class="fas fa-cart-arrow-down"></i>
+                <span class="number_item">
+                    
+                </span>
+            </div>
+        </a>
+    </div>
+    <div id="carouselRender">
+        <div class="row">
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- <script src="./js/json.js"></script>  -->
+    
+    <script>
+
+    function listPrd(image, name, price,){
+        let product = new Object();
+        product.image = image,
+        product.name  = name,
+        product.price = price
+        
+        return product ;
+    }
+
+
+    var htmlRender = document.querySelector("#carouselRender .row");
+    render(arrayPrd,htmlRender);
+    var prd = null;
+
+    function MakeProduct(){
+        let noteImg = document.getElementById('image');
+        let image    = noteImg.value
+        noteImg.value = ""
+
+        let noteName = document.getElementById('name');
+        let name     = noteName.value
+        noteName.value = ""
+
+        let notePrice = document.getElementById('price');
+        let price     = notePrice.value
+        notePrice.value = ""
+        
+        prd = listPrd(image, name, price);
+
+// ========================================= P0ST ALL =============================================
+        var APIURL = "https://z27wg.sse.codesandbox.io/listImage";
+        axios.post(APIURL, {
+            image: image,
+            name: name,
+            price:price,
+            
+        })
+        .then(function (response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+    }
+
+    </script>
+</body>
+</html>
